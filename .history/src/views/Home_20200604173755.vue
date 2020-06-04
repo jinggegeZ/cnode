@@ -7,7 +7,7 @@
 </template>
 
 <script>
-
+import layout from '../layout/layout'
  export default {
    data () {
      return {

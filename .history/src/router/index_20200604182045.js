@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import layout from '../views/layout1/layout'
+import layout from '../views/layout/layout'
 
 Vue.use(VueRouter)
 
@@ -13,8 +13,8 @@ Vue.use(VueRouter)
   {
     path:'/',
     name:'layout',
-    component: layout,
-    children: [
+    component: () => {'../layout/layout.vue'},
+    children:[
       {
         path: '',
         name: 'Home',

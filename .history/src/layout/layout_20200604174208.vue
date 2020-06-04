@@ -2,11 +2,14 @@
  <div>
     <div class="top">我是头部组件</div>
      <div class="right"> 我是右边的组件</div>
-     <div class="box"><router-view></router-view></div>
+     <div class="box">
+     <router-view></router-view>
+     </div>
  </div>
 </template>
 
 <script>
+
  export default {
    data () {
      return {

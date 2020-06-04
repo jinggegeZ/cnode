@@ -1,21 +1,21 @@
 <template>
  <div>
-  <div>123</div>
-  <div>456</div>
-  <div>789</div>
+
  </div>
 </template>
 
 <script>
-
  export default {
+   name: 'Item',
+   props: {
+   },
+   components: {
+
+   },
    data () {
      return {
 
      }
-   },
-   components: {
-
    },
    methods: {
 
@@ -32,6 +32,6 @@
  }
 </script>
 
-<style scoped>
+<style scoped lang='scss'>
 
 </style>

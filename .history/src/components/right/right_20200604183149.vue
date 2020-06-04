@@ -1,13 +1,10 @@
 <template>
  <div>
-  <div>123</div>
-  <div>456</div>
-  <div>789</div>
+
  </div>
 </template>
 
 <script>
-
  export default {
    data () {
      return {
@@ -33,5 +30,11 @@
 </script>
 
 <style scoped>
-
+    .right {
+        width: 200px;
+        height: 500px;
+        background: red;
+        position: absolute;
+        right: 0;
+    }
 </style>

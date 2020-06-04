@@ -14,7 +14,7 @@ Vue.use(VueRouter)
     path:'/',
     name:'layout',
     component: layout,
-    children: [
+    children:[
       {
         path: '',
         name: 'Home',
