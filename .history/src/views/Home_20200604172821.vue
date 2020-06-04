@@ -7,7 +7,6 @@
 </template>
 
 <script>
-import display from '../display/display'
  export default {
    data () {
      return {

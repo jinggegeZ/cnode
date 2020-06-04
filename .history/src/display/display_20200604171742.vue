@@ -1,13 +1,11 @@
 <template>
  <div>
-  <div>123</div>
-  <div>456</div>
-  <div>789</div>
+    <div class="top">我是头部组件</div>
+     <div class="right"> 我是右边的组件</div>
  </div>
 </template>
 
 <script>
-import display from '../display/display'
  export default {
    data () {
      return {
@@ -32,6 +30,6 @@ import display from '../display/display'
  }
 </script>
 
-<style scoped>
+<style scoped lang='scss'>
 
 </style>

@@ -1,13 +1,10 @@
 <template>
  <div>
-  <div>123</div>
-  <div>456</div>
-  <div>789</div>
+    <div class="right"> 我是右边的组件</div>
  </div>
 </template>
 
 <script>
-import display from '../display/display'
  export default {
    data () {
      return {
@@ -33,5 +30,13 @@ import display from '../display/display'
 </script>
 
 <style scoped>
-
+    
+    .right {
+        width: 200px;
+        height: 600px;
+        background: pink;
+        position: absolute;
+        top: 50px;
+        right: 0;
+    }
 </style>

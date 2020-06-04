@@ -1,13 +1,11 @@
 <template>
  <div>
-  <div>123</div>
-  <div>456</div>
-  <div>789</div>
+    <div></div>
+    <div></div>
  </div>
 </template>
 
 <script>
-import display from '../display/display'
  export default {
    data () {
      return {
@@ -32,6 +30,6 @@ import display from '../display/display'
  }
 </script>
 
-<style scoped>
+<style scoped lang='scss'>
 
 </style>
