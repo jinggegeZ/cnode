@@ -8,10 +8,10 @@
             <div>
                 <router-view></router-view>
             </div>
-            <div class="right">
+        </div>
+        <div class="right">
                 <right></right>
             </div>
-        </div>
     </div>
     <div class="below">
         <below></below>
@@ -52,11 +52,6 @@
 <style scoped>
     .container {
         width: 100%;
-    height: 100%;
-    background: rgb(225,225,225);
-    }
-    .content {
-        display: flex;
     }
    
    

@@ -77,15 +77,15 @@
       submitForm() {
         this.$refs.ruleForm.validate((valid) => {
           if (valid) {
-            this.$message.success('登录成功')
-             this.$router.push('/')
+            this.$message.success('登录成功');
+            
+      },
           } else {
             this.$message.error('用户名或者密码错误')
             return false;
           }
         });
-        
-      },
+          this.$router.push('/')
      
     },
    mounted() {

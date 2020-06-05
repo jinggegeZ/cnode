@@ -1,19 +1,15 @@
 <template>
  <div>
-    <!-- <template>
-    <el-backtop target=".page-component__scroll .el-scrollbar__wrap"></el-backtop>
-    </template> -->
   <div >
       <div class="box">
     <el-card class="box-card">
     <div slot="header" class="clearfix">
     <div class="head">
-      <div @click="click"><a href="">全部</a></div>
-      <div @click="click"><a href="">精华</a></div>
-      <div @click="click"><a href="">分享</a></div>
-      <div @click="click"><a href="">问答</a></div>
-      <div @click="click"><a href="">招聘</a></div>
-      <div @click="click"><a href="">客户端测试</a></div>
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
     </div>
     <el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button>
     </div>
@@ -58,9 +54,6 @@
       },
       handleCurrentChange(val) {
         console.log(`当前页: ${val}`);
-      },
-      click() {
-        
       }
    },
    mounted() {
@@ -76,10 +69,7 @@
 </script>
 
 <style scoped>
-  a {
-    text-decoration: none;
-    color: green;
-  }
+  
   .box {
     display: flex;
     margin-left: 100px;
@@ -107,13 +97,6 @@
     margin-right: 10px;
   }
   .head {
-    width: 400px;
     display: flex;
-    justify-content: space-around;
-  }
-  .f-font {
-    background: green;
-    color: white;
-    
   }
 </style>

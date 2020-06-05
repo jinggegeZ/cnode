@@ -29,6 +29,10 @@
         <div class="r-head">
           <div class="d-box"><div class="d-ft">积分榜 top 100>></div></div>
           <div><a href="" class="r-font">CabloyJS V3.2.0支持Socket IO</a></div>
+          <div><a href="" class="r-font">从零到部署：用 Vue 和 Express 实现迷你全栈电商应用（四）</a></div>
+          <div><a href="" class="r-font">Linux 主机在线文件管理工具</a></div>
+          <div><a href="" class="r-font">nodejs 的反序列化存在漏洞么</a></div>
+          <div><a href="" class="r-font">异步组件报错问题</a></div>
         </div>
       </div>
     </div>
@@ -47,7 +51,7 @@
    },
    methods: {
       login(){
-        this.$router.push('/login')
+        this.$router.push('../../views/login/login.vue')
       }
    },
    mounted() {
@@ -106,7 +110,5 @@
       background: rgb(246,246,246);
       line-height: 50px;
     }
-    .d-ft {
-      margin-left: 10px;
-    }
+    .d-ft
 </style>

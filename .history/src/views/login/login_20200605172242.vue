@@ -13,7 +13,7 @@
         </el-form-item>
         <el-form-item>
     <el-button type="primary" @click="submitForm">提交</el-button>
-    
+    <el-button @click="resetForm('ruleForm')">重置</el-button>
   </el-form-item>
 </el-form>
     </div>
@@ -33,7 +33,6 @@
         if (!value) {
           return callback(new Error('姓名不能为空'));
         }
-        callback();
       };
       let validatePass = (rule, value, callback) => {
         if (value === '') {
@@ -45,7 +44,7 @@
           callback();
         }
       };
-      let validatePass2 = (rule, value, callback) => {
+      let validatePass1 = (rule, value, callback) => {
         if (value === '') {
           callback(new Error('请再次输入密码'));
         } else if (value !== this.ruleForm.pass) {
@@ -78,13 +77,12 @@
         this.$refs.ruleForm.validate((valid) => {
           if (valid) {
             this.$message.success('登录成功')
-             this.$router.push('/')
           } else {
             this.$message.error('用户名或者密码错误')
             return false;
           }
         });
-        
+         this.$router.push('/')
       },
      
     },

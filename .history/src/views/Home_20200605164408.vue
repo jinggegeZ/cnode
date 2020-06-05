@@ -1,19 +1,16 @@
 <template>
  <div>
-    <!-- <template>
-    <el-backtop target=".page-component__scroll .el-scrollbar__wrap"></el-backtop>
-    </template> -->
   <div >
       <div class="box">
     <el-card class="box-card">
     <div slot="header" class="clearfix">
     <div class="head">
-      <div @click="click"><a href="">全部</a></div>
-      <div @click="click"><a href="">精华</a></div>
-      <div @click="click"><a href="">分享</a></div>
-      <div @click="click"><a href="">问答</a></div>
-      <div @click="click"><a href="">招聘</a></div>
-      <div @click="click"><a href="">客户端测试</a></div>
+      <div class="f-font"><a href="">全部</a></div>
+      <div class="f-font"><a href="">精华</a></div>
+      <div class="f-font"><a href="">分享</a></div>
+      <div class="f-font"><a href="">问答</a></div>
+      <div class="f-font"><a href="">招聘</a></div>
+      <div class="f-font"><a href="">客户端测试</a></div>
     </div>
     <el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button>
     </div>
@@ -30,7 +27,9 @@
       :page-size="10"
       layout="total, sizes, prev, pager, next, jumper"
       :total="40">
-    </el-pagination>
+      </el-pagination>
+      <el-backtop target=".page-component__scroll .el-scrollbar__wrap">
+      </el-backtop>
   </div>
 </el-card>
   </div>
@@ -58,9 +57,6 @@
       },
       handleCurrentChange(val) {
         console.log(`当前页: ${val}`);
-      },
-      click() {
-        
       }
    },
    mounted() {
@@ -107,13 +103,6 @@
     margin-right: 10px;
   }
   .head {
-    width: 400px;
     display: flex;
-    justify-content: space-around;
-  }
-  .f-font {
-    background: green;
-    color: white;
-    
   }
 </style>

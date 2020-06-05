@@ -1,21 +1,21 @@
 <template>
- <div class="continar">
-    <div class="box">
-      <el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
-        <el-form-item label="姓名" prop="username">
-        <el-input type="text" v-model="ruleForm.username" autocomplete="off"></el-input>
-        </el-form-item>
+ <div>
+    <div class="">
+        <el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
         <el-form-item label="密码" prop="pass">
         <el-input type="password" v-model="ruleForm.pass" autocomplete="off"></el-input>
         </el-form-item>
         <el-form-item label="确认密码" prop="checkPass">
         <el-input type="password" v-model="ruleForm.checkPass" autocomplete="off"></el-input>
         </el-form-item>
+        <el-form-item label="年龄" prop="age">
+        <el-input v-model.number="ruleForm.age"></el-input>
+        </el-form-item>
         <el-form-item>
-    <el-button type="primary" @click="submitForm">提交</el-button>
-    
-  </el-form-item>
-</el-form>
+        <el-button type="primary" @click="submitForm('ruleForm')">提交</el-button>
+        <el-button @click="resetForm('ruleForm')">重置</el-button>
+        </el-form-item>
+        </el-form>
     </div>
  </div>
 </template>
@@ -28,12 +28,22 @@
    components: {
 
    },
-   data() {
-      let checkUsername = (rule, value, callback) => {
+   data () {
+       let checkAge = (rule, value, callback) => {
         if (!value) {
-          return callback(new Error('姓名不能为空'));
+          return callback(new Error('年龄不能为空'));
         }
-        callback();
+        setTimeout(() => {
+          if (!Number.isInteger(value)) {
+            callback(new Error('请输入数字值'));
+          } else {
+            if (value < 18) {
+              callback(new Error('必须年满18岁'));
+            } else {
+              callback();
+            }
+          }
+        }, 1000);
       };
       let validatePass = (rule, value, callback) => {
         if (value === '') {
@@ -53,12 +63,11 @@
         } else {
           callback();
         }
-      };
-      return {
-        ruleForm: {
+     return {
+         ruleForm: {
           pass: '',
           checkPass: '',
-          username: ''
+          age: ''
         },
         rules: {
           pass: [
@@ -67,27 +76,29 @@
           checkPass: [
             { validator: validatePass2, trigger: 'blur' }
           ],
-          username: [
-            { validator: checkUsername, trigger: 'blur' }
+          age: [
+            { validator: checkAge, trigger: 'blur' }
           ]
         }
       };
-    },
+     }
+   },
    methods: {
-      submitForm() {
-        this.$refs.ruleForm.validate((valid) => {
+       submitForm(formName) {
+        this.$refs[formName].validate((valid) => {
           if (valid) {
-            this.$message.success('登录成功')
-             this.$router.push('/')
+            alert('submit!');
           } else {
-            this.$message.error('用户名或者密码错误')
+            console.log('error submit!!');
             return false;
           }
         });
-        
       },
-     
-    },
+      resetForm(formName) {
+        this.$refs[formName].resetFields();
+      }
+    }
+   },
    mounted() {
 
    },
@@ -101,13 +112,5 @@
 </script>
 
 <style scoped>
-.continar {
-    width:100%;
-    height: 100%;
-}
-.box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 </style>

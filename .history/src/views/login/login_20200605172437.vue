@@ -33,7 +33,6 @@
         if (!value) {
           return callback(new Error('姓名不能为空'));
         }
-        callback();
       };
       let validatePass = (rule, value, callback) => {
         if (value === '') {
@@ -78,13 +77,12 @@
         this.$refs.ruleForm.validate((valid) => {
           if (valid) {
             this.$message.success('登录成功')
-             this.$router.push('/')
           } else {
             this.$message.error('用户名或者密码错误')
             return false;
           }
         });
-        
+         this.$router.push('/')
       },
      
     },

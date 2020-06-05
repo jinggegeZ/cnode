@@ -3,7 +3,7 @@
     <div class="box">
       <el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
         <el-form-item label="姓名" prop="username">
-        <el-input type="text" v-model="ruleForm.username" autocomplete="off"></el-input>
+        <el-input type="username" v-model="ruleForm.username" autocomplete="off"></el-input>
         </el-form-item>
         <el-form-item label="密码" prop="pass">
         <el-input type="password" v-model="ruleForm.pass" autocomplete="off"></el-input>
@@ -12,8 +12,8 @@
         <el-input type="password" v-model="ruleForm.checkPass" autocomplete="off"></el-input>
         </el-form-item>
         <el-form-item>
-    <el-button type="primary" @click="submitForm">提交</el-button>
-    
+    <el-button type="primary" @click="submitForm('ruleForm')">提交</el-button>
+    <el-button @click="resetForm('ruleForm')">重置</el-button>
   </el-form-item>
 </el-form>
     </div>
@@ -33,7 +33,17 @@
         if (!value) {
           return callback(new Error('姓名不能为空'));
         }
-        callback();
+        setTimeout(() => {
+          if (!username.isInteger(value)) {
+            callback(new Error('请输入姓名'));
+          } else {
+            if (value < 2) {
+              callback(new Error('规范姓名2-3位'));
+            } else {
+              callback();
+            }
+          }
+        }, 1000);
       };
       let validatePass = (rule, value, callback) => {
         if (value === '') {
@@ -74,19 +84,20 @@
       };
     },
    methods: {
-      submitForm() {
-        this.$refs.ruleForm.validate((valid) => {
+      submitForm(formName) {
+        this.$refs[formName].validate((valid) => {
           if (valid) {
-            this.$message.success('登录成功')
-             this.$router.push('/')
+            alert('submit!');
+            this.$router.push('/')
           } else {
-            this.$message.error('用户名或者密码错误')
+            console.log('error submit!!');
             return false;
           }
         });
-        
       },
-     
+      resetForm(formName) {
+        this.$refs[formName].resetFields();
+      }
     },
    mounted() {
 

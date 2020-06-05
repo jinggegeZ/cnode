@@ -47,7 +47,7 @@
    },
    methods: {
       login(){
-        this.$router.push('/login')
+        this.$router.push('../../views/login/login.vue')
       }
    },
    mounted() {
