@@ -3,7 +3,6 @@
   <div>123</div>
   <div>456</div>
   <div>789</div>
-  <div>我是home里面的数据{{name}}</div>
  </div>
 </template>
 
@@ -29,7 +28,7 @@
    },
    computed: {
      name() {
-       return this.$store.state.name
+       return this.$store
      }
    }
  }

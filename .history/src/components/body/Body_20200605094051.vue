@@ -1,22 +1,21 @@
 <template>
  <div>
-  <div>123</div>
-  <div>456</div>
-  <div>789</div>
-  <div>我是home里面的数据{{name}}</div>
+   <div> 我是body里面显示的数据: {{name}}</div>
  </div>
 </template>
 
 <script>
-
  export default {
+   name: '',
+   props: {
+   },
+   components: {
+
+   },
    data () {
      return {
 
      }
-   },
-   components: {
-
    },
    methods: {
 
@@ -28,13 +27,13 @@
 
    },
    computed: {
-     name() {
+       name() {
        return this.$store.state.name
      }
    }
  }
 </script>
 
-<style scoped>
+<style scoped lang='scss'>
 
 </style>

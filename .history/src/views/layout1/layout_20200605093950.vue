@@ -2,7 +2,7 @@
  <div>
     <div class="container">
         
-            <div class="top">
+            <div class="t-head">
             <top></top>
             </div>
         
@@ -13,9 +13,11 @@
             <div class="right">
                 <right></right>
             </div>
-        </div>
-        <div class="below">
-            <below></below>
+            <div>
+                <Body>
+                    
+                </Body>
+            </div>
         </div>
     </div>
  </div>
@@ -24,7 +26,7 @@
 <script>
     import top from '../../components/top/top'
     import right from '../../components/right/right'
-    import below from '../../components/below/below'
+    import body from '../../components/body/Body'
  export default {
      name:'layout',
    data () {
@@ -35,7 +37,6 @@
    components: {
        top,
        right,
-       below,
    },
    methods: {
 
@@ -47,6 +48,7 @@
 
    },
    computed: {
+
    }
  }
 </script>

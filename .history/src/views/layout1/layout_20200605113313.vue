@@ -15,7 +15,7 @@
             </div>
         </div>
         <div class="below">
-            <below></below>
+            <foot></foot>
         </div>
     </div>
  </div>
@@ -35,7 +35,7 @@
    components: {
        top,
        right,
-       below,
+       foot,
    },
    methods: {
 

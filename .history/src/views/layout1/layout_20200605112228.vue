@@ -14,9 +14,9 @@
                 <right></right>
             </div>
         </div>
-        <div class="below">
-            <below></below>
-        </div>
+            <div>
+            <foot></foot>
+            </div>
     </div>
  </div>
 </template>
@@ -24,7 +24,7 @@
 <script>
     import top from '../../components/top/top'
     import right from '../../components/right/right'
-    import below from '../../components/below/below'
+    import foot from '../../components/foot/foot'
  export default {
      name:'layout',
    data () {
@@ -35,7 +35,7 @@
    components: {
        top,
        right,
-       below,
+       foot,
    },
    methods: {
 

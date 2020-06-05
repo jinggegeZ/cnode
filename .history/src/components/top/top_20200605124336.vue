@@ -17,14 +17,7 @@
           </div>
         </div>
         <div class="b-right">
-            <div class="b-box">
-                <a href="">首页</a>
-                <a href="">新手入门</a>
-                <a href="">API</a>
-                <a href="">关于</a>
-                <a href="">注册</a>
-                <a href="">登录</a>
-            </div>
+        
         </div>
       </div>
     </div>
@@ -45,13 +38,6 @@ export default {
 </script>
 
 <style scoped >
-a {
-    text-decoration: none;
-    color: #777;
-}
-a:hover {
-    color: white;
-}
 .top {
   width: 100%;
   height: 50px;
@@ -94,14 +80,6 @@ a:hover {
 }
 .img {
     display: flex;
-    align-items: center;
-}
-.b-right {
-    width: 300px;
-}
-.b-box {
-    display: flex;
-    justify-content: space-around;
     align-items: center;
 }
 </style>

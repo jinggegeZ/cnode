@@ -47,11 +47,9 @@ export default {
 <style scoped >
 a {
     text-decoration: none;
-    color: #777;
-}
-a:hover {
     color: white;
 }
+a:hover
 .top {
   width: 100%;
   height: 50px;
