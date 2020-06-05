@@ -7,13 +7,9 @@
             <div class="fb"></div>
             <div><a href="">源码地址</a></div>
           </div>
-          <div class="fb-font">CNode 社区为国内最专业的 Node.js 开源技术社区，致力于 Node.js 的技术研究。</div>
-          <div class="fb-font">
-          服务器赞助商为
-          <a href=""><img src="//static.cnodejs.org/FuIpEaM9bvsZKnQ3QfPtBHWQmLM9" alt=""></a>
-          ，存储赞助商为<a href=""><img src="//static.cnodejs.org/Fg0jtDIcTqVC049oVu5-sn6Om4NX" alt="" width="115px"></a>,由<a href=""><img src="//static.cnodejs.org/FpMZk31PDyxkC8yStmMQL4XroaGD" alt="" width="166px"></a>
-          提供性能服务</div>
-          <div class="fb-font">新手搭建 Node.js 服务器，推荐使用无需备案的 <a href="https:www.409236083@qq.com">https:409236083@qq.com</a></div>
+          <div class="fb-font"></div>
+          <div class="fb-font"></div>
+          <div class="fb-font"></div>
         </div>
     </div>
  </div>
@@ -72,11 +68,11 @@
     }
     .fb {
       width: 1px ;
-      height: 15px;
+      height: 20px;
       background: black;
       margin-left: 10px;
       margin-right: 10px;
-      margin-top: 18px;
+      margin-top: 12px;
     }
 
 </style>

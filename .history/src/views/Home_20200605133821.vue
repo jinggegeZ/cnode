@@ -66,7 +66,7 @@
   .body {
     width: 100%;
     height: 100%;
-    background: rgb(225,225,225);
+    background: rgb();
   }
   .box {
     display: flex;
@@ -90,7 +90,6 @@
   }
 
   .box-card {
-    width: 1080px;
-    margin-right: 10px;
+    width: 1100px;
   }
 </style>

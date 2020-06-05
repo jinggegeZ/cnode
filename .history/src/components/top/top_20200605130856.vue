@@ -3,9 +3,9 @@
     <div class="top">
       <div class="box">
         <div class="b-left">
-          <a href="/" class="img" >
+          <div class="img" @click="home">
             <img src="//static2.cnodejs.org/public/images/cnodejs_light.svg" alt="" width="128px" height="30px">
-          </a>
+          </div>
           <div class="ipt">
             <i class="el-icon-search icon"></i>
             <input type="text" class="item">

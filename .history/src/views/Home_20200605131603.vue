@@ -1,16 +1,9 @@
 <template>
  <div>
-  <div class="body">
-      <div class="box">
-    <el-card class="box-card">
-    <div slot="header" class="clearfix">
-    <span>卡片名称</span>
-    <el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button>
-    </div>
-    <div v-for="o in 4" :key="o" class="text item">
-    {{'列表内容 ' + o }}
-  </div>
-      <!-- 分页器 -->
+  <div class="box">
+    <div>123</div>
+    <div>456</div>
+    <div>789</div>
     <div class="block">
     <el-pagination
       @size-change="handleSizeChange"
@@ -21,8 +14,6 @@
       layout="total, sizes, prev, pager, next, jumper"
       :total="40">
     </el-pagination>
-  </div>
-</el-card>
   </div>
   </div>
  </div>
@@ -63,34 +54,8 @@
 </script>
 
 <style scoped>
-  .body {
-    width: 100%;
-    height: 100%;
-    background: rgb(225,225,225);
-  }
   .box {
     display: flex;
-    margin-left: 100px;
-  }
-  .text {
-    font-size: 14px;
-  }
 
-  .item {
-    margin-bottom: 18px;
-  }
-
-  .clearfix:before,
-  .clearfix:after {
-    display: table;
-    content: "";
-  }
-  .clearfix:after {
-    clear: both
-  }
-
-  .box-card {
-    width: 1080px;
-    margin-right: 10px;
   }
 </style>

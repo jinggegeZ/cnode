@@ -90,7 +90,6 @@
   }
 
   .box-card {
-    width: 1080px;
-    margin-right: 10px;
+    width: 1185px;
   }
 </style>

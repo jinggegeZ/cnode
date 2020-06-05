@@ -11,9 +11,9 @@
           <div class="fb-font">
           服务器赞助商为
           <a href=""><img src="//static.cnodejs.org/FuIpEaM9bvsZKnQ3QfPtBHWQmLM9" alt=""></a>
-          ，存储赞助商为<a href=""><img src="//static.cnodejs.org/Fg0jtDIcTqVC049oVu5-sn6Om4NX" alt="" width="115px"></a>,由<a href=""><img src="//static.cnodejs.org/FpMZk31PDyxkC8yStmMQL4XroaGD" alt="" width="166px"></a>
-          提供性能服务</div>
-          <div class="fb-font">新手搭建 Node.js 服务器，推荐使用无需备案的 <a href="https:www.409236083@qq.com">https:409236083@qq.com</a></div>
+          ，存储赞助商为<a href=""><img src="//static.cnodejs.org/Fg0jtDIcTqVC049oVu5-sn6Om4NX" alt=""></a>,由
+          </div>
+          <div class="fb-font"></div>
         </div>
     </div>
  </div>

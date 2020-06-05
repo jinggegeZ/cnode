@@ -3,11 +3,16 @@
     <div class="top">
       <div class="box">
         <div class="b-left">
-          <a href="/" class="img" >
-            <img src="//static2.cnodejs.org/public/images/cnodejs_light.svg" alt="" width="128px" height="30px">
-          </a>
+          <div class="img">
+            <img
+              src="//static2.cnodejs.org/public/images/cnodejs_light.svg"
+              alt
+              width="128px"
+              height="30px"
+            />
+          </div>
           <div class="ipt">
-            <i class="el-icon-search icon"></i>
+            <i class="el-icon-search"></i>
             <input type="text" class="item">
           </div>
         </div>
@@ -35,9 +40,6 @@ export default {
   methods: {
       login(){
           this.$router.push('../../views/login/login.vue')
-      },
-      home(){
-          this.$router.push('/')
       }
   },
   mounted() {},
@@ -105,8 +107,5 @@ a:hover {
     display: flex;
     justify-content: space-around;
     align-items: center;
-}
-.icon {
-    margin-left: 5px;
 }
 </style>

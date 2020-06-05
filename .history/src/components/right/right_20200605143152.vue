@@ -3,8 +3,8 @@
     <div class="right">
       <div class="r-head">
         <div class="rh-box">
-          <a href="" class="r-font">CNODE:NODE-JS专业中文社区</a>
-          <a href="" class="r-font">您可以登录或者注册</a>
+          <div class="r-font">CNODE:NODE-JS专业中文社区</div>
+          <div class="r-font">您可以登录或者注册</div>
           <div class="r-but r-font"><button @click="login">登录</button></div>
         </div>
       </div>
@@ -17,12 +17,13 @@
       </div>
       <div class="r-haed">
         <div class="r-head">
-          <div class="d-box">无人回复的话题</div>
-          <div><a href="" class="r-font">CabloyJS V3.2.0支持Socket IO</a></div>
-          <div><a href="" class="r-font">从零到部署：用 Vue 和 Express 实现迷你全栈电商应用（四）</a></div>
-          <div><a href="" class="r-font">Linux 主机在线文件管理工具</a></div>
-          <div><a href="" class="r-font">nodejs 的反序列化存在漏洞么</a></div>
-          <div><a href="" class="r-font">异步组件报错问题</a></div>
+          <a href=""></a>
+          <a href=""></a>
+          <a href=""></a>
+          <a href=""></a>
+          <a href=""></a>
+          <a href=""></a>
+          <a href=""></a>
         </div>
       </div>
     </div>
@@ -57,10 +58,6 @@
 </script>
 
 <style scoped>
-      a {
-        text-decoration: none;
-        color: black;
-      }
     .right {
         width: 290px;
         position: absolute;
@@ -95,10 +92,5 @@
       height: 80px;
       display: flex;
       align-items: center;
-    }
-    .d-box {
-      height: 50px;
-      background: rgb(246,246,246);
-      line-height: 50px;
     }
 </style>

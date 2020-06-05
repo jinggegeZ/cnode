@@ -1,7 +1,6 @@
 <template>
  <div>
-  <div class="body">
-      <div class="box">
+  <div class="box">
     <el-card class="box-card">
     <div slot="header" class="clearfix">
     <span>卡片名称</span>
@@ -10,8 +9,9 @@
     <div v-for="o in 4" :key="o" class="text item">
     {{'列表内容 ' + o }}
   </div>
-      <!-- 分页器 -->
-    <div class="block">
+</el-card>
+    <!-- 分页器 -->
+    <!-- <div class="block">
     <el-pagination
       @size-change="handleSizeChange"
       @current-change="handleCurrentChange"
@@ -21,9 +21,7 @@
       layout="total, sizes, prev, pager, next, jumper"
       :total="40">
     </el-pagination>
-  </div>
-</el-card>
-  </div>
+  </div> -->
   </div>
  </div>
 </template>
@@ -63,34 +61,8 @@
 </script>
 
 <style scoped>
-  .body {
-    width: 100%;
-    height: 100%;
-    background: rgb(225,225,225);
-  }
   .box {
     display: flex;
-    margin-left: 100px;
-  }
-  .text {
-    font-size: 14px;
-  }
 
-  .item {
-    margin-bottom: 18px;
-  }
-
-  .clearfix:before,
-  .clearfix:after {
-    display: table;
-    content: "";
-  }
-  .clearfix:after {
-    clear: both
-  }
-
-  .box-card {
-    width: 1080px;
-    margin-right: 10px;
   }
 </style>
