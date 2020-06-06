@@ -1,21 +1,12 @@
 <template>
   <div>
     <div class="right">
-      <div class="r-head" >
+      <div class="r-head">
         <div class="rh-box">
-          <a href="https://cnodejs.org/" class="r-font">CNODE:NODE-JS专业中文社区</a>
-          <a href="/login" class="r-font">您可以登录或者注册</a>
+          <a href class="r-font">CNODE:NODE-JS专业中文社区</a>
+          <a href class="r-font">您可以登录或者注册</a>
           <div class="r-but r-font">
             <button @click="login">登录</button>
-          </div>
-        </div>
-        <div class="rh-box" >
-          <a class="r-font">这个人很几把懒什么都没有留下</a>
-
-          <a class="r-font">您可以 留言 或者 退出 </a>
-          <div class="r-but r-font">
-            <button @click="login">登录</button>
-            <button @click="out">退出</button>
           </div>
         </div>
       </div>
@@ -58,21 +49,8 @@
             <div slot="header" class="clearfix">
               <span>友情社区</span>
             </div>
-            <div class="text item"><a href="https://ruby-china.org/" target="blank"><img src="//static2.cnodejs.org/public/images/ruby-china-20150529.png" alt="" width="150px"></a></div>
-            <div class="text item"><a href="http://phphub.org/"  target="blank"><img src="//static2.cnodejs.org/public/images/phphub-logo.png" alt="" width="150px"></a></div>
-          </el-card>
-        </div>
-      </div>
-      <div class="r-haed">
-        <div class="r-head">
-          <el-card class="box-card">
-            <div slot="header" class="clearfix">
-              <span>客户端二维码</span>
-            </div>
-            <div class="a-box">
-              <div><img src="//static.cnodejs.org/FtG0YVgQ6iginiLpf9W4_ShjiLfU" alt="" width="200px" height="200px"></div>
-              <div class="a-font"><a href="https://github.com/soliury/noder-react-native" target="blank">客户端源码地址</a></div>
-            </div>
+            <div class="text item"><img src="" alt=""></div>
+            <div class="text item"><img src="" alt=""></div>
           </el-card>
         </div>
       </div>
@@ -89,9 +67,6 @@ export default {
   methods: {
     login() {
       this.$router.push("/login");
-    },
-    out() {
-      this.$router.replace('/')
     }
   },
   mounted() {},
@@ -151,26 +126,18 @@ a {
 .item {
   margin-bottom: 14px;
 }
+
 .clearfix:before,
 .clearfix:after {
   display: table;
   content: "";
+  background: rgb(225,225,225);
 }
 .clearfix:after {
   clear: both;
 }
+
 .box-card {
   width: 300px;
-}
-.a-font {
- font-size: 14px;
-}
-.a-box {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.a-font:hover {
-  text-decoration: underline;
 }
 </style>

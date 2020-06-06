@@ -58,8 +58,7 @@ import dayjs from 'dayjs'
         currentPage2: 5,
         currentPage3: 5,
         currentPage4: 4,
-        arr:[],
-        
+        arr:[]
      }
    },
    components: {

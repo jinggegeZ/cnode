@@ -1,21 +1,12 @@
 <template>
   <div>
     <div class="right">
-      <div class="r-head" >
+      <div class="r-head">
         <div class="rh-box">
-          <a href="https://cnodejs.org/" class="r-font">CNODE:NODE-JS专业中文社区</a>
-          <a href="/login" class="r-font">您可以登录或者注册</a>
+          <a href class="r-font">CNODE:NODE-JS专业中文社区</a>
+          <a href class="r-font">您可以登录或者注册</a>
           <div class="r-but r-font">
             <button @click="login">登录</button>
-          </div>
-        </div>
-        <div class="rh-box" >
-          <a class="r-font">这个人很几把懒什么都没有留下</a>
-
-          <a class="r-font">您可以 留言 或者 退出 </a>
-          <div class="r-but r-font">
-            <button @click="login">登录</button>
-            <button @click="out">退出</button>
           </div>
         </div>
       </div>
@@ -89,9 +80,6 @@ export default {
   methods: {
     login() {
       this.$router.push("/login");
-    },
-    out() {
-      this.$router.replace('/')
     }
   },
   mounted() {},
@@ -171,6 +159,6 @@ a {
   flex-wrap: wrap;
 }
 .a-font:hover {
-  text-decoration: underline;
+  border-bottom: 1px solid black;
 }
 </style>

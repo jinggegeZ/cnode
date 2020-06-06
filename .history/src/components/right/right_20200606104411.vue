@@ -1,21 +1,12 @@
 <template>
   <div>
     <div class="right">
-      <div class="r-head" >
+      <div class="r-head">
         <div class="rh-box">
-          <a href="https://cnodejs.org/" class="r-font">CNODE:NODE-JS专业中文社区</a>
-          <a href="/login" class="r-font">您可以登录或者注册</a>
+          <a href class="r-font">CNODE:NODE-JS专业中文社区</a>
+          <a href class="r-font">您可以登录或者注册</a>
           <div class="r-but r-font">
             <button @click="login">登录</button>
-          </div>
-        </div>
-        <div class="rh-box" >
-          <a class="r-font">这个人很几把懒什么都没有留下</a>
-
-          <a class="r-font">您可以 留言 或者 退出 </a>
-          <div class="r-but r-font">
-            <button @click="login">登录</button>
-            <button @click="out">退出</button>
           </div>
         </div>
       </div>
@@ -69,10 +60,8 @@
             <div slot="header" class="clearfix">
               <span>客户端二维码</span>
             </div>
-            <div class="a-box">
-              <div><img src="//static.cnodejs.org/FtG0YVgQ6iginiLpf9W4_ShjiLfU" alt="" width="200px" height="200px"></div>
-              <div class="a-font"><a href="https://github.com/soliury/noder-react-native" target="blank">客户端源码地址</a></div>
-            </div>
+            <div><img src="//static.cnodejs.org/FtG0YVgQ6iginiLpf9W4_ShjiLfU" alt="" width="200px" height="200px"></div>
+              <div><a href="https://github.com/soliury/noder-react-native" target="blank"></a></div>
           </el-card>
         </div>
       </div>
@@ -89,9 +78,6 @@ export default {
   methods: {
     login() {
       this.$router.push("/login");
-    },
-    out() {
-      this.$router.replace('/')
     }
   },
   mounted() {},
@@ -159,18 +145,8 @@ a {
 .clearfix:after {
   clear: both;
 }
+
 .box-card {
   width: 300px;
-}
-.a-font {
- font-size: 14px;
-}
-.a-box {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.a-font:hover {
-  text-decoration: underline;
 }
 </style>

@@ -9,7 +9,7 @@
     <div slot="header" class="clearfix">
     <div class="head">
       <div @click="all"><a href="/">全部</a></div>
-      <div @click="sport"><a href="">精华</a></div>
+      <div @click="sport" v-if="item.good === true"><a href="">精华</a></div>
       <div @click="share"><a href="">分享</a></div>
       <div @click="ask"><a href="">问答</a></div>
       <div @click="click"><a href="">招聘</a></div>
@@ -58,8 +58,7 @@ import dayjs from 'dayjs'
         currentPage2: 5,
         currentPage3: 5,
         currentPage4: 4,
-        arr:[],
-        
+        arr:[]
      }
    },
    components: {

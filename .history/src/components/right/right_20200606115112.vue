@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="right">
-      <div class="r-head" >
+      <div class="r-head" v-if="">
         <div class="rh-box">
           <a href="https://cnodejs.org/" class="r-font">CNODE:NODE-JS专业中文社区</a>
           <a href="/login" class="r-font">您可以登录或者注册</a>
@@ -9,7 +9,7 @@
             <button @click="login">登录</button>
           </div>
         </div>
-        <div class="rh-box" >
+        <div class="rh-box" v-else>
           <a class="r-font">这个人很几把懒什么都没有留下</a>
 
           <a class="r-font">您可以 留言 或者 退出 </a>

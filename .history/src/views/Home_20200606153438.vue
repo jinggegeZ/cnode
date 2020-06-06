@@ -9,7 +9,7 @@
     <div slot="header" class="clearfix">
     <div class="head">
       <div @click="all"><a href="/">全部</a></div>
-      <div @click="sport"><a href="">精华</a></div>
+      <div @click="sport" v-if=""><a href="">精华</a></div>
       <div @click="share"><a href="">分享</a></div>
       <div @click="ask"><a href="">问答</a></div>
       <div @click="click"><a href="">招聘</a></div>
@@ -26,8 +26,7 @@
           <a href="" class="item4">{{item.title}}</a>
       </div>
       <div>
-        <div>1212</div>
-        <div>{{item.last_reply_at}}前</div>
+        <div>123</div>
       </div>
     </div>
       <!-- 分页器 -->
@@ -50,7 +49,6 @@
 
 <script>
 import axios from 'axios'
-import dayjs from 'dayjs'
  export default {
    data () {
      return {
@@ -58,8 +56,7 @@ import dayjs from 'dayjs'
         currentPage2: 5,
         currentPage3: 5,
         currentPage4: 4,
-        arr:[],
-        
+        arr:[]
      }
    },
    components: {
