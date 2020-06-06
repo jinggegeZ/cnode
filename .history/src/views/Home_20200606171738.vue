@@ -17,7 +17,7 @@
     </div>
     </div>
     <div v-for="(item,index) in arr" :key="index" class="text item style ">
-      <div class="item2" v-if="arr.length%10 === 0">
+      <div class="item2" >
           <div class="item1"><a href="" class="img"><img :src="item.author.avatar_url" alt="" width="25px" height="25px"></a></div>
           <div class="item3">{{item.reply_count}}/{{item.visit_count}}</div>
           <div class="i-top" v-if="index < 2">置顶</div>

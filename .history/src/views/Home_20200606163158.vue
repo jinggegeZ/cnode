@@ -16,8 +16,8 @@
       <div @click="click"><a href="">客户端测试</a></div>
     </div>
     </div>
-    <div v-for="(item,index) in arr" :key="index" class="text item style ">
-      <div class="item2" v-if="arr.length%10 === 0">
+    <div v-for="(item,index) in arr" :key="index" class="text item style">
+      <div class="item2">
           <div class="item1"><a href="" class="img"><img :src="item.author.avatar_url" alt="" width="25px" height="25px"></a></div>
           <div class="item3">{{item.reply_count}}/{{item.visit_count}}</div>
           <div class="i-top" v-if="index < 2">置顶</div>
@@ -27,7 +27,7 @@
       </div>
       <div>
         <div>1212</div>
-        <div>天前</div>
+        <div>{{item.last_reply_at}}天前</div>
       </div>
     </div>
       <!-- 分页器 -->
@@ -59,7 +59,6 @@ import dayjs from 'dayjs'
         currentPage3: 5,
         currentPage4: 4,
         arr:[],
-        arr1:[]
         
      }
    },
@@ -80,20 +79,18 @@ import dayjs from 'dayjs'
             axios.get(`https://cnodejs.org/api/v1/topics`)
            .then((res)=>{
             this.arr = res.data.data
+            console.log(this.arr);
            })
            .catch((err)=>{
              console.log(err)
            })
          },
-      all(){
+         all(){
            this.$router.replace('/')
-      },
-      
-
+         }
    },
    mounted() {
      this.gteData()
-     
    },
    watch: {
 

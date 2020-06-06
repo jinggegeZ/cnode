@@ -17,31 +17,30 @@
     </div>
     </div>
     <div v-for="(item,index) in arr" :key="index" class="text item style ">
-      <div class="item2" v-if="arr.length%10 === 0">
+      <div class="item2 block">
+        <el-pagination
+        @size-change="handleSizeChange"
+        @current-change="handleCurrentChange"
+        :current-page="currentPage4"
+        :page-sizes="[10, 20, 30, 40]"
+        :page-size="10"
+        layout="total, sizes, prev, pager, next, jumper"
+        :total="40">
           <div class="item1"><a href="" class="img"><img :src="item.author.avatar_url" alt="" width="25px" height="25px"></a></div>
           <div class="item3">{{item.reply_count}}/{{item.visit_count}}</div>
           <div class="i-top" v-if="index < 2">置顶</div>
           <div class="i-top1" v-if="index > 2 && item.tab === 'share'">分享</div>
           <div class="i-top1" v-if="item.tab === 'ask'">问答</div>
           <a href="/details" class="item4">{{item.title}}</a>
+          </el-pagination>
       </div>
       <div>
         <div>1212</div>
-        <div>天前</div>
+        <div>{{item.last_reply_at}}天前</div>
       </div>
     </div>
       <!-- 分页器 -->
-    <div class="block">
-    <el-pagination
-      @size-change="handleSizeChange"
-      @current-change="handleCurrentChange"
-      :current-page="currentPage4"
-      :page-sizes="[10, 20, 30, 40]"
-      :page-size="10"
-      layout="total, sizes, prev, pager, next, jumper"
-      :total="40">
-    </el-pagination>
-  </div>
+
 </el-card>
   </div>
   </div>

@@ -6,7 +6,7 @@
           <a href="https://cnodejs.org/" class="r-font">CNODE:NODE-JS专业中文社区</a>
           <a href="/login" class="r-font">您可以登录或者注册</a>
           <div class="r-but r-font">
-            <el-button @click="login" type="primary">登录</el-button>
+            <el-button @click="login" type="primy">登录</el-button>
           </div>
         </div>
         <div class="rh-box" >
@@ -14,8 +14,8 @@
 
           <a class="r-font">您可以 留言 或者 退出 </a>
           <div class="r-but r-font">
-            <el-button @click="login" type="primary">登录</el-button>
-            <el-button @click="out" type="primary">退出</el-button>
+            <button @click="login">登录</button>
+            <button @click="out">退出</button>
           </div>
         </div>
       </div>

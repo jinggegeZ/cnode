@@ -14,8 +14,8 @@
 
           <a class="r-font">您可以 留言 或者 退出 </a>
           <div class="r-but r-font">
-            <el-button @click="login" type="primary">登录</el-button>
-            <el-button @click="out" type="primary">退出</el-button>
+            <button @click="login">登录</button>
+            <button @click="out">退出</button>
           </div>
         </div>
       </div>
