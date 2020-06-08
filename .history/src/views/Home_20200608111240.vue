@@ -200,6 +200,6 @@ import dayjs from 'dayjs'
     margin-left: 10px;
   }
   .i-font {
-    margin-top: 10px;
+    text-align: center;
   }
 </style>

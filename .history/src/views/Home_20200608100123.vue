@@ -14,18 +14,17 @@
       </div>
     </div>
     <div v-for="(item,index) in arr.slice((currentPage - 1) * pageSize, currentPage*pageSize)" :key="index" class="text item style ">
-      <div class="item2">
+      <div class="item2" v-if="arr.length%10 === 0">
           <div class="item1"><a href="" class="img"><img :src="item.author.avatar_url" alt="" width="25px" height="25px"></a></div>
           <div class="item3">{{item.reply_count}}/{{item.visit_count}}</div>
-          <div class="i-top" v-if="item.top === true ">置顶</div>
+          <div class="i-top" v-if="top === true">置顶</div>
           <div class="i-top1" v-if="item.tab === 'share'">分享</div>
-          <div class="i-top" v-if="item.good === true">精华</div>
           <div class="i-top1" v-if="item.tab === 'ask'">问答</div>
-          <div @click="goTo" class="item4">{{item.title}}</div>
+          <a href="/details" class="item4">{{item.title}}</a>
       </div>
       <div>
-        <div class="i-font" v-if="item.day && item.day < 30 && item.day >= 1">{{item.day}}天前</div>
-        <div class="i-font" v-if="item.day && item.day >= 30">{{item.day % 30}}月前</div>
+        <div>1212</div>
+        <div>天前</div>
       </div>
     </div>
     <el-pagination
@@ -69,16 +68,8 @@ import dayjs from 'dayjs'
         
       },
       gteData(){
-            axios.get(`https://cnodejs.org/api/v1/topics`)            
+            axios.get(`https://cnodejs.org/api/v1/topics`)
            .then((res)=>{
-             res.data.data.map(item => {
-               item.time = dayjs(item.last_reply_at).valueOf()
-               let now = Date.now()
-               this.$set(item,'second', Math.ceil((now - item.time) / 1000))
-               this.$set(item,'mins', Math.ceil((now - item.time) / 1000 / 60))
-               this.$set(item,'hour', Math.ceil((now - item.time) / 1000 / 60 / 60))
-               this.$set(item,'day', Math.ceil((now - item.time) / 1000 / 60 / 60 / 24 ))
-             })
             this.arr = res.data.data
            })
            .catch((err)=>{
@@ -88,10 +79,6 @@ import dayjs from 'dayjs'
       all(){
            this.$router.replace('/')
       },
-
-      goTo(item){
-        this.$router.push({name: 'detail', query: {id: item.id}})
-      }
       
 
    },
@@ -143,7 +130,7 @@ import dayjs from 'dayjs'
   .item4 {
     margin-left: 10px;
     color:black;
-    width: 600px;
+    width: 700px;
     font-size: 16px;
   }
   .box {
@@ -198,8 +185,5 @@ import dayjs from 'dayjs'
     justify-content: center;
     align-items: center;
     margin-left: 10px;
-  }
-  .i-font {
-    margin-top: 10px;
   }
 </style>

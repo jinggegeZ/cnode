@@ -5,9 +5,8 @@
 </template>
 
 <script>
-import axios from 'axios';
  export default {
-   name: 'Details',
+   name: '',
    props: {
    },
    components: {
@@ -15,22 +14,14 @@ import axios from 'axios';
    },
    data () {
      return {
-       id:'',
-       article: {}
+       id:''
      }
    },
    methods: {
-     getData(){
-       axios.get('https://cnodejs.org/api/v1/topic/${this.id}').then(res => {
-         this.article = res.data.data
-       }).catch(err => {
-         console.log(err);
-       })
-     }
+
    },
    mounted() {
      this.id = this.$route.query.id
-     this.getData()
    },
    watch: {
 

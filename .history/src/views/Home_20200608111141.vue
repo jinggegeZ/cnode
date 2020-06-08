@@ -24,8 +24,8 @@
           <div @click="goTo" class="item4">{{item.title}}</div>
       </div>
       <div>
-        <div class="i-font" v-if="item.day && item.day < 30 && item.day >= 1">{{item.day}}天前</div>
-        <div class="i-font" v-if="item.day && item.day >= 30">{{item.day % 30}}月前</div>
+        <div class="" v-if="item.day && item.day < 30 && item.day >= 1">{{item.day}}天前</div>
+        <div v-if="item.day && item.day >= 30">{{item.day % 30}}月前</div>
       </div>
     </div>
     <el-pagination
@@ -198,8 +198,5 @@ import dayjs from 'dayjs'
     justify-content: center;
     align-items: center;
     margin-left: 10px;
-  }
-  .i-font {
-    margin-top: 10px;
   }
 </style>
