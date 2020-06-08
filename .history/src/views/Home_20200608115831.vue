@@ -17,9 +17,9 @@
       <div class="item2">
           <div class="item1"><a href="" class="img"><img :src="item.author.avatar_url" alt="" width="25px" height="25px"></a></div>
           <div class="item3">{{item.reply_count}}/{{item.visit_count}}</div>
-          <div class="i-top" v-if="item.top === true">置顶</div>
-          <div class="i-top1" v-if="item.tab === 'share' && index > 2">分享</div>
-          <div class="i-top" v-if="item.good === true && index > 1">精华</div>
+          <div class="i-top" v-if="item.top === true && item.good === true && item.tab === share">置顶</div>
+          <div class="i-top1" v-if="item.tab === 'share'">分享</div>
+          <div class="i-top" v-if="item.good === true">精华</div>
           <div class="i-top1" v-if="item.tab === 'ask'">问答</div>
           <div @click="goTo" class="item4">{{item.title}}</div>
       </div>
@@ -127,8 +127,8 @@ import dayjs from 'dayjs'
   .style:hover {
     background: rgb(225,225,225);
   }
-  .item4:hover {
-     text-decoration: underline;
+  .style:hover a{
+    text-decoration: underline;
   }
   .item1 {
     margin-left: 10px;

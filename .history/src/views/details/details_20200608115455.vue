@@ -21,7 +21,7 @@ import axios from 'axios';
    },
    methods: {
      getData(){
-       axios.get(`https://cnodejs.org/api/v1/topic/${this.id}`).then(res => {
+       axios.get('https://cnodejs.org/api/v1/topic/${this.id}').then(res => {
          console.log(res.data.data);
        }).catch(err => {
          console.log(err);

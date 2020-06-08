@@ -127,8 +127,8 @@ import dayjs from 'dayjs'
   .style:hover {
     background: rgb(225,225,225);
   }
-  .item4:hover {
-     text-decoration: underline;
+  .style:hover a{
+    text-decoration: underline;
   }
   .item1 {
     margin-left: 10px;

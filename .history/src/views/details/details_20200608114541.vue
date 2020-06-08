@@ -7,7 +7,7 @@
 <script>
 import axios from 'axios';
  export default {
-   name: 'details',
+   name: 'Details',
    props: {
    },
    components: {
@@ -21,8 +21,8 @@ import axios from 'axios';
    },
    methods: {
      getData(){
-       axios.get(`https://cnodejs.org/api/v1/topic/${this.id}`).then(res => {
-         console.log(res.data.data);
+       axios.get('').then(res => {
+         this.article = res.data.data
        }).catch(err => {
          console.log(err);
        })
